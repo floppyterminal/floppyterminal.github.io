@@ -66,7 +66,7 @@ function handleCommand(command) {
         case 'touch':
             createFile(args[0]);
             break;
-        case 'edit':
+        case 'ed':
             startEditingFile(args[0]);
             break;
         case 'print':
@@ -111,7 +111,7 @@ function createDirectory(name) {
 }
 
 function changeDirectory(name) {
-    if (name === '..') {
+    if (name === '~') {
         const parts = currentDirectory.split('/');
         parts.pop();
         previousDirectory = currentDirectory;
@@ -233,7 +233,7 @@ function updateOutput() {
     output.appendChild(blink);
 }
 function help(){
-    output.innerHTML+="<div>To create a directory: mkir [directory-name]<br>To create a file: touch [file-name]<br>To edit a file: edit [file-name]<br>To view a file's text contents: print [file-name]<br>To run a javascript file: run [file-name]<br>To list directories: ls<br>To open a directory: cd [directory-name]<br>To go the previous directory: cd -<br>To go to the root directory cd: ..<br>To save your files and directories to a floppy disk: save<br>To mount a floppy disk: load<br>To clear terminal: clear</div>";
+    output.innerHTML+="<div>To create a directory: mkir [directory-name]<br>To create a file: touch [file-name]<br>To edit a file: ed [file-name]<br>To view a file's text contents: print [file-name]<br>To run a javascript file: run [file-name]<br>To list directories: ls<br>To open a directory: cd [directory-name]<br>To go the previous directory: cd -<br>To go to the root directory: cd ~<br>To save your files and directories to a floppy disk: save<br>To mount a floppy disk: load<br>To clear terminal: clear</div>";
 }
 function clear(){
     output.innerHTML="<div>Welcome to the terminal. Type help for commands.</div>";

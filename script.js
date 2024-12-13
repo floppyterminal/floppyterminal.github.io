@@ -213,5 +213,5 @@ function updateOutput() {
     output.appendChild(blink);
 }
 function help(){
-    output.innerHTML+="<div>To create a directory: mkir [directory-name]<br>To create a file: touch [file-name]<br>To edit a file: edit [file-name]<br>To view a file's text contents: print [file-name]<br>To run a javascript file: run [file-name]<br>To list directories: ls<br>To open a directory: cd [directory-name]<br>To go the previous directory: cd -<br>To go to the first directory cd: ..<br>To save your files and directories to a floppy disk: save<br>To mount a floppy disk: load</div>";
+    output.innerHTML+="<div>To create a directory: mkir [directory-name]<br>To create a file: touch [file-name]<br>To edit a file: edit [file-name]<br>To view a file's text contents: print [file-name]<br>To run a javascript file: run [file-name]<br>To list directories: ls<br>To open a directory: cd [directory-name]<br>To go the previous directory: cd -<br>To go to the root directory cd: ..<br>To save your files and directories to a floppy disk: save<br>To mount a floppy disk: load</div>";
 }

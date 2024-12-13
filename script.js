@@ -1,3 +1,20 @@
+function openFullscreen() {
+  const element = document.documentElement; // Target the entire document
+
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.mozRequestFullScreen) { // Firefox
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) { // IE/Edge
+    element.msRequestFullscreen();
+  }
+}
+
+// Call the function when the page loads
+window.addEventListener('load', openFullscreen); 
+document.body.style.cursor="none";
 const output = document.getElementById('output');
 const input = document.getElementById('input');
 const blink = document.createElement('span');

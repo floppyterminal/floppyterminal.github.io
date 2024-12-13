@@ -14,7 +14,6 @@ function openFullscreen() {
 
 // Call the function when the page loads
 window.addEventListener('load', openFullscreen); 
-document.body.style.cursor="none";
 const output = document.getElementById('output');
 const input = document.getElementById('input');
 const blink = document.createElement('span');

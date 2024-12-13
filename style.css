@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#command-prompt {
+    width: 80%;
+    height: 80%;
+    border: 1px solid green;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+#input-line span {
+    padding-right: 10px;
+}
+
+#input {
+    background: none;
+    border: none;
+    color: green;
+    outline: none;
+    width: 100%;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

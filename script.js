@@ -1,6 +1,7 @@
 const output = document.getElementById('output');
 const input = document.getElementById('input');
 const blink = document.createElement('span');
+output.innerHTML="<div>Welcome to the terminal. Type help for commands.</div>"
 blink.className = 'blink';
 blink.textContent = '|';
 let fileSystem = {
@@ -30,6 +31,9 @@ input.addEventListener('keydown', function (e) {
 function handleCommand(command) {
     const [cmd, ...args] = command.split(' ');
     switch (cmd) {
+        case 'help':
+            help();
+            break;
         case 'mkdir':
             createDirectory(args[0]);
             break;
